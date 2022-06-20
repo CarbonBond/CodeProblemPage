@@ -10,14 +10,15 @@ input.type = 'submit'
 input.value = 'TEST'
 
 let result = document.querySelector('.result')
-result.textContent = "Click Test"
+result.textContent = 'Click Test'
 
 input.addEventListener('click', (e) => {
   e.preventDefault()
-  let arrOfStr = numArrNode.value.trim().split(' ');
+  document.activeElement.blur()
+  let arrOfStr = numArrNode.value.trim().split(' ')
   arrOfNum = arrOfStr.map((num) => parseInt(num))
-  arrayLength = arrOfNum.length;
-  if (instance === null) return;
+  arrayLength = arrOfNum.length
+  if (instance === null) return
   const bytesPerElement = instance.HEAP32.BYTES_PER_ELEMENT
   const arrayPointer = instance._malloc(arrayLength * bytesPerElement)
 
