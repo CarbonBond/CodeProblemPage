@@ -2,12 +2,15 @@ import Module from './containsDuplicate.js'
 let instance = null
 let form = document.querySelector('.form')
 let numArrNode = document.querySelector('.numArr')
-
 let input = document.createElement('input')
 let arrOfNum = [1, 2, 3, 4]
 let arrayLength = arrOfNum.length
+input.classList.add('button')
 input.type = 'submit'
-input.value = 'Submit'
+input.value = 'TEST'
+
+let result = document.querySelector('.result')
+result.textContent = "Click Test"
 
 input.addEventListener('click', (e) => {
   e.preventDefault()
@@ -25,7 +28,7 @@ input.addEventListener('click', (e) => {
     'number',
   ])
 
-  console.log(containsDuplicate(arrayLength, arrayPointer))
+  result.textContent = containsDuplicate(arrayLength, arrayPointer)
   instance._free(arrayPointer)
 })
 
