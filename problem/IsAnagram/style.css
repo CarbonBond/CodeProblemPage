@@ -1,0 +1,165 @@
+/*------------ RESET ----------------*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/*
+  10. List Dot Removal
+*/
+
+
+table {
+  border:none;
+border-collapse: collapse;
+}
+tr, td {
+  border: none;
+}
+/*------------ COLORS ---------------*/
+
+:root {
+  --main-color: 100, 0%, 90%;
+  --accent-color: 100, 0%, 15%;
+}
+
+/*------------- PAGE ----------------*/
+body {
+  background-color: hsl(var(--main-color));
+}
+header {
+  width: 100%;
+  position: absolute;
+  height: 100px;
+  background-color: hsl(var(--accent-color));
+}
+
+.main{
+  display:grid;
+  grid-template-columns: 100px 1fr  1fr 100px;
+  grid-template-rows: 100px  1fr  2fr  2fr 100px;
+  height: 100%;
+}
+
+.title {
+  grid-area: 2 / 2 / 3 / 4;
+  align-self: center;
+  justify-self: center;
+  text-transform: capitalize;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.explanation, .problem {
+  margin:15px;
+  letter-spacing: .5px;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+
+}
+
+.explanation {
+  grid-area: 3 / 2 / 5 / 3;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.problem {
+  grid-area: 3 / 3 / 5 / 4;
+}
+table {
+  width: 100%;
+  height: 100%;
+}
+th {
+  background-color: hsl(var(--accent-color));
+  color: hsl(var(--main-color));
+  font-size: 25px;
+  padding: 10px 10px 0px 10px;
+  text-align: left;
+}
+td {
+  padding: 0 5px;
+}
+tr:nth-child(even) {
+  background-color: hsl(var(--accent-color), 70%);
+}
+tr {
+  background-color: hsl(var(--accent-color), 95%);
+}
+th,td, .form>input {
+  text-shadow: 1px 1px 1px black;
+  font-size: 20px;
+  color: hsl(var(--main-color));
+}
+
+.form {
+  display: flex;
+  background-color: inherit;
+  padding: 0 6px 0 0;
+}
+.form>input{
+  margin: 0 3px 0 0px;
+  border: solid 2px hsl(var(--main-color));
+  background-color: inherit;
+}
+.button:Hover{
+  border: solid 2px hsl(var(--main-color), 80%);
+  color: hsl(var(--main-color), 80%);
+}
+.button:focus{
+  border: solid 2px hsl(var(--main-color), 50%);
+  color: hsl(var(--main-color), 50%);
+
+}
+
