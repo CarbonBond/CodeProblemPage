@@ -1,47 +1,67 @@
-<!DOCTYPE html>
-<html land='en'>
+<html>
+  <!DOCTYPE html>
 
-<head>
-  <meta charset="UTF-8">
-  <title>PROBLEM</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="">
-  <script src="./script.js" type="module" defer></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>PROBLEM</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" type="module" defer></script>
+  </head>
 
-<body>
-  <header></header>
+  <body>
+    <header></header>
 
-  <section class"main">
-    <h2 class="title">TITLE</h2>
-    <div class="explanation">
-      <div class="description">DESCRIPTION</div>
-      <div class="constraints">
-        <ul>
-          <li>CONSTRAINTS</li>
-        </ul>
+    <section class="main">
+      <h2 class="title">PROBLEM</h2>
+      <div class="explanation">
+        <div class="description">
+          <h2>Description</h2>
+          DESCRIPTION
+        </div>
+        <div class="constraints">
+          <h2>Constraints</h2>
+          <ul>
+            <li>SOME CONSTRAINT</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="problem">
-      <ul class="scenarios">
-        <li>
-          <div class="scene">SCENE</div>
-          <div class="answer">ANSWER</div>
-        </li>
-        <li>
-          <div class="scene">
-            <form class="form">
-              <label for="numArr"></label><br />
-              <input class="numArr" type="text" id="numArr" name="numArr" value="1 2 3 4" /><br />
-            </form>
-          </div>
-          <div class="answer">
-            <div class="result"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-</body>
 
+      <div class="problem">
+        <table class="scenarios">
+          <tr>
+            <th>INPUT</th>
+            <th>OUTPUT</th>
+          </tr>
+          <tr>
+            <td class="scene">PROBLEM</td>
+            <td class="answer">ANSWER</td>
+          </tr>
+          <tr>
+            <td class="scene">
+              <form class="form">
+                <label for="numArr"></label>
+                <input
+                  class="numArr"
+                  type="text"
+                  id="numArr"
+                  name="numArr"
+                  value="1 2 3 4"
+                />
+              </form>
+            </td>
+            <td class="answer">
+              <div class="result"></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </body>
 </html>
