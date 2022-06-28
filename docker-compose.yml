@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    container_name: code-problem 
+    image: code-problem
+    build:
+      context: .
+      target: production
+    ports:
+      - "8091:80"
+    restart: always
+
